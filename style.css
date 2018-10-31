@@ -39,6 +39,9 @@ section {
 #oferta > .oferta_pasek {
     height: 7vh;
     background-color: grey;
+    display:flex;
+    justify-content: center;
+    align-items: center;
 }
 
 #oferta > ul {
@@ -59,7 +62,35 @@ section {
     margin: 20px;
 }
 
+/* REALIZACJE */
 
+#realizacje {
+    height: 100vh;
+    background-color: lightskyblue;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#realizacje > .realizacjePasek {
+    height: 7vh;
+    width: 100%;
+    background-color: grey;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#realizacje > #carouselExampleIndicators {
+    margin-top: 7vh;
+    width: 80%;
+   
+    
+}
+
+.d-block.w-100 {
+    object-fit: contain;
+}
 
 
 
