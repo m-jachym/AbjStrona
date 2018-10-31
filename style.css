@@ -1,0 +1,66 @@
+body {
+    background-color: floralwhite;
+}
+
+/* NAV BAR */
+
+.nav {
+    background-color: white;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 40px 10px 40px;
+}
+
+.nav > .right {
+    display: flex;
+    flex-direction: row;
+}
+
+/* ABOUT */
+
+section {
+    height: 95vh;
+    background: url(images/section1\ bg.jpg) no-repeat center;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* OFERTA */
+
+#oferta {
+    height: 100vh;
+    background-color: lightgrey;
+
+}
+
+#oferta > .oferta_pasek {
+    height: 7vh;
+    background-color: grey;
+}
+
+#oferta > ul {
+    list-style-type: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 30px;
+    margin-top: 40px;
+
+}
+
+#oferta > ul > li {
+    height: 50vh;
+    width: 25%;
+    background-color: white;
+    padding: 10px;
+    margin: 20px;
+}
+
+
+
+
+
+
