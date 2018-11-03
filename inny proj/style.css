@@ -1,29 +1,24 @@
+@font-face {
+    font-family: "myfont";
+    src: url(assets/bankgothic-md-bt-medium-webfont.woff) format('woff');
+}
 html, body {
     margin: 0;
-    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), 
-    url('assets/bg_image.jpg') no-repeat center center fixed;
-    background-size: 135%;
-    background-position: top;
+    
+    background-image: url(images/section1\ bg.jpg);
+    
+    /* background positioning - like in design - is possible, but probably the easiest way is to cut bgImage in PS (or even paint ;)) */
     background-size: cover;
     font-family: 'Raleway', sans-serif;
-    
+    /* display: flex;
+    flex-direction: column;
+    justify-content: space-between; */
     height: 100%;
     font-size: 18px;
 }
 
-/* NAV BAR */
+/* ---HEADER--- */
 
-/* .nav {
-    background-color: white;
-    display: flex;
-    justify-content: space-between;
-    padding: 10px 40px 10px 40px;
-}
-
-.nav > .right {
-    display: flex;
-    flex-direction: row;
-} */
 #hamburger {
     position: absolute;
     right: 0;
@@ -33,6 +28,19 @@ html, body {
 .iks {
     content: url('assets/iks.svg');
     padding-right: 30px !important;
+}
+header {
+    position: fixed;
+    width: 100%;
+}
+.black {
+    background: rgba(0,0,0,1);
+    
+    transition: background 2.5s, height 1s;
+    height: 60px;
+    padding-top: 15px;
+    display:flex;
+    align-items: center;
 }
 nav {
     display: flex;
@@ -45,6 +53,11 @@ nav {
 #logo {
     height: 50px;
 }
+#logo.resize {
+    margin-bottom: 15px;
+    height: 40px;
+    transition: height 1s;
+}
 ul {
     padding: 0;
 }
@@ -53,8 +66,9 @@ ul li {
     text-align: center;
     padding: 10px 17px;
     text-transform: uppercase;
-    font-weight: 600;
-    font-size: 0.8rem;
+    font-family: myfont;
+    font-weight: 400;
+    font-size: 0.95rem;
 }
 ul li:nth-child(4) {
     border: solid 2px white;
@@ -101,12 +115,10 @@ ul li:nth-child(5) {
     transition: width .3s;
 }
 
-/* ABOUT */
+/* SECTION */
 
 section {
-    height: 100vh;
-    background: url(images/section1\ bg.jpg) no-repeat center;
-    background-size: cover;
+    height: 400px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -179,7 +191,63 @@ section {
 .d-block.w-100 {
     object-fit: contain;
 }
+/* ----------------------------------------------------- */
 
 
 
+
+
+
+/* --- RWD --- */
+@media (max-width:768px) {
+    /* --- HEADER --- */
+    /* toggling element */
+    .active {
+        display: flex;
+        flex-direction: column;
+        background-color: #001820;
+        z-index: 1;
+        height: 100%;
+        position: fixed;
+    }
+    #hamburger {
+        display:block;
+        height: 20px;
+        padding-top: 30px;
+        padding-right: 25px;
+        z-index: 5;
+    }
+    nav {
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        padding: 0;
+    }
+    nav #logo {
+        padding-top:20px;
+        width: 115px;
+        z-index: 5;
+    }
+    ul {
+        display:none;
+        width: 100%;
+        padding-top: 80px; 
+    }
+    ul li {
+        display: block;
+        padding: 30px;
+        margin: 0px auto;
+    }
+    ul li:nth-child(4) {
+        margin: 20px auto;
+        padding: 10px 50px;
+    }
+    ul li:nth-child(5) {
+        display: flex;
+        justify-content: space-around;
+        width: 75%;
+        padding: 35px 0px;
+    }
+
+}
 
